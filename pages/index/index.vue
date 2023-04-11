@@ -1,28 +1,18 @@
 <template>
   <div class="Index">
     <header>
-      <Header></Header>
+      <Header class="Header"></Header>
     </header>
     <main>
       <section>
-        <div class="First_data">
-          <div class="bg">
-            <div class="First_data_main">
-              <div class="First_Main_title">
-                <div class="Mian_title">
-                  <img src="~/assets/index_image/mian_title.png" alt="">
-                </div>
-                <div class="Mian_title_text">常に先へ</div>
-                <div class="First_data_Content">
-                  顧客様より先に考えること | 顧客様より先に行動すること
-                </div>
-                <div class="Mian_scrool">
-                  <div class="Mian_scrool_content">SCROLL</div>
-                  <div class="Mian_scrool_line"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Index_First -->
+        <IndexFirst></IndexFirst>
+      </section>
+      <section>
+        <div class="Main_background">
+            <!-- Main tasks. -->
+          <MainTasks></MainTasks>
+          <!-- <IndustryArea></IndustryArea> -->
         </div>
       </section>
     </main>
@@ -38,17 +28,22 @@ export default {
   margin: 0;
   padding: 0;
 }
-
+.Header{
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
 .First_data {
   width: 100%;
-  height: 920px;
+  height: 100vh;
   overflow: hidden;
 
 }
 
 .bg {
   width: 100%;
-  height: 920px;
+  height: 100%;
   z-index: -1;
   background-image: url('~/assets/index_image/pic_banner.png');
   background-repeat: no-repeat;
@@ -81,9 +76,6 @@ export default {
   padding: 9px 23px 9px 19px;
 
 }
-.Mian_scrool{
-
-}
 .Mian_scrool_content{
   width: 11px;
   height: 52px;
@@ -99,5 +91,20 @@ export default {
   height: 80px;
   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, #FFFFFF 100%);
   transform: translateX(-5px);
+}
+.Main_background{
+  width: 100%;
+  height: 1260px;
+  background: linear-gradient(0deg, #0E1B47 0%, #2E4A9E 100%);
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px){
+  .Main_background{
+    height: auto;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .Main_background{
+    height: auto;
+  }
 }
 </style>
