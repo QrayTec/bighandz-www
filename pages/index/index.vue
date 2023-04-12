@@ -12,7 +12,7 @@
         <div class="Main_background">
             <!-- Main tasks. -->
           <MainTasks></MainTasks>
-          <!-- <IndustryArea></IndustryArea> -->
+          <IndustryArea></IndustryArea>
         </div>
       </section>
     </main>
