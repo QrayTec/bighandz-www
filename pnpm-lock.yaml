@@ -1,5 +1,10 @@
 lockfileVersion: '6.0'
 
+dependencies:
+  animate.css:
+    specifier: ^4.1.1
+    version: registry.npmmirror.com/animate.css@4.1.1
+
 devDependencies:
   '@nuxtjs/tailwindcss':
     specifier: ^6.6.5
@@ -1716,6 +1721,12 @@ packages:
       json-schema-traverse: registry.npmmirror.com/json-schema-traverse@0.4.1
       uri-js: registry.npmmirror.com/uri-js@4.4.1
     dev: true
+
+  registry.npmmirror.com/animate.css@4.1.1:
+    resolution: {integrity: sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/animate.css/-/animate.css-4.1.1.tgz}
+    name: animate.css
+    version: 4.1.1
+    dev: false
 
   registry.npmmirror.com/ansi-escapes@4.3.2:
     resolution: {integrity: sha512-gKXj5ALrKWQLsYG9jlTRmR/xKluxHV+Z9QEwNIgCfM1/uwPMCuzVVnh5mwTd+OuBZcwSIMbqssNWRm1lE51QaQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ansi-escapes/-/ansi-escapes-4.3.2.tgz}
