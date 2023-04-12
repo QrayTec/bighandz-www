@@ -147,7 +147,7 @@ export default {
   margin-top: 80px;
   height: 104px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .Tabs_item{
   width: 250px;
@@ -277,10 +277,45 @@ export default {
   justify-content: center;
   align-items: center;
 }
-@media only screen and (min-width: 680px) and (max-width: 1300px) {
+@media only screen and (min-width: 1300px) and (max-width: 1440px) {
   .industry_area_Main{
     transform: translateY(0px);
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 679px) {}
+@media only screen and (min-width: 1024px) and (max-width: 1300px) {
+  .industry_area_Main{
+    transform: translateY(0px);
+  }
+  .industry_area_Main_Content{
+    width: 900px;
+  }
+  .Tabs_ConTent_Div_1_Content{
+    width: 900px;
+  }
+  .industry_area_Main_tabs{
+    height: 115px;
+  }
+  .Tabs_item{
+    height: 115px;
+  }
+  .Tabs_item_Content{
+    display: block;
+    padding: 7.5px 0;
+  }
+  .Tabs_item_image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .Tabs_item_Content_Main{
+    margin-left: 0;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 1023px) {
+  .industry_area_Main{
+    transform: translateY(0px);
+  }
+}
 </style>
