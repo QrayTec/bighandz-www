@@ -14,6 +14,10 @@
           <MainTasks></MainTasks>
           <IndustryArea></IndustryArea>
         </div>
+        
+      </section>
+      <section>
+        <MajorClients></MajorClients>
       </section>
     </main>
   </div>
