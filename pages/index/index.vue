@@ -23,6 +23,7 @@
     <footer>
       <Footer></Footer>
     </footer>
+    <BackTop></BackTop>
   </div>
 </template>
 <script>
