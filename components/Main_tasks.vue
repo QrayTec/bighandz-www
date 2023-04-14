@@ -566,7 +566,7 @@ export default {
   }
 }
 
-@media only screen and (min-width: 320px) and (max-width: 679px) {
+@media only screen and (max-width: 679px) {
   .Main_tasks_content {
     padding: 20px;
   }

@@ -133,7 +133,7 @@ export default {
       margin-top: 20px;
     }
   }
-  @media only screen and (min-width: 320px) and (max-width: 767px) {
+  @media only screen and (max-width: 767px) {
     .MaJor_Clients{
       height: auto;
       margin-top: 0px;

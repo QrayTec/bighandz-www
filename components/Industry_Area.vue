@@ -348,15 +348,15 @@ export default {
     width: auto;
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen  and (max-width: 767px) {
   .industry_area_Main{
     transform: translateY(0px);
   }
   .industry_area_Main_Content{
-    width: 300px
+    width: 80%;
   }
   .Tabs_ConTent_Div_1_Content{
-    width: 300px;
+    width: 80%;
     padding: 0px;
   }
 

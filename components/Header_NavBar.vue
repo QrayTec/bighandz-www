@@ -30,8 +30,9 @@
             :class="{ 'active_Text': active == index }">
             <div class="NavBar_List_Content " @click="NavBar_click(index)">
               {{ item.title }}
-              <div class="active_List" v-show="active == index"></div>
             </div>
+            <div class="active_List" v-show="active == index"></div>
+
           </NuxtLink>
         </div>
       </div>
@@ -222,7 +223,6 @@ export default {
   justify-content: center;
   margin: 0px 10px;
   position: relative;
-  transform: translateY(4px);
 
 }
 
@@ -233,6 +233,7 @@ export default {
   bottom: 4px;
   left: 0;
   background-color: #597BE5;
+  transform: translateY(4px);
 }
 
 .Secondary_Menu {
