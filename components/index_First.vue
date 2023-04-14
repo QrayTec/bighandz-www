@@ -89,6 +89,7 @@ export default {
  .index_First_Content{
     width: 960px;
   }
+
   .index_First_Text_title {
     margin-top: 86px;
     margin-left: 60px;
@@ -122,6 +123,13 @@ export default {
 }
 
 @media screen and (max-width: 1023px) {
+  .index_First{
+    height: 100vh;
+  }
+  .index_First_Iamge_title{
+    margin-top: 150px;
+  }
+
   .index_First_Content{
     width: 80%;
   }
@@ -153,7 +161,7 @@ export default {
     width: 15px;
     height: 152px;
     left: 10px;
-    top: 658px;
+    top: 508px;
 }
 }
 </style>

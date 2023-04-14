@@ -1,7 +1,7 @@
 <template>
   <div class="Index">
     <header>
-      <Header class="Header"></Header>
+      <HeaderNavBar class="Header"></HeaderNavBar>
     </header>
     <main>
       <section>
