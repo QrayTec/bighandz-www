@@ -1,5 +1,5 @@
 <template>
-  <div class="Nav_Bar" :class="{ 'Nav_Bar_h': NavbarShow }">
+  <div class="Nav_Bar Header" :class="{ 'Nav_Bar_h': NavbarShow }">
     <div class="Nav_Bar_List_data">
       <div class="NavBar_Main">
         <div class="NavBar_Main_List">
@@ -60,6 +60,7 @@
   </div>
 </template>
 <script>
+import internal from 'stream';
 import gongsixinxi from '~/assets/NavBar/icon_gongsixinxi.png';
 import yewugaishu from '~/assets/NavBar/icon_yewugaishu.png';
 import zhaopinxinxi from '~/assets/NavBar/icon_zhaopinxinxi.png';
@@ -77,7 +78,7 @@ export default {
       Secondary_Menu_Flag: false,
       Secondary_Menu_List_1: [
         { title: "経営理念", link: '/About_Us' },
-        { title: "社長からのメッセージ", link: '/About_Us/' },
+        { title: "社長からのメッセージ", link: '/About_Us/Message_from_President' },
         { title: "会社概要と沿革", link: '/' },
         { title: "関連会社", link: '/' },
       ],
@@ -100,10 +101,21 @@ export default {
       NavbarShow: false,
     }
   },
+  props:{
+    active_props:{
+      type:Number,
+      required: true
+    },
+    
+  },
   mounted() {
     this.Secondary_Menu_List_Data = this.Secondary_Menu_List_1;
     window.addEventListener('resize', this.checkScreenSize)
     this.checkScreenSize()
+    if(this.active_props!=null){
+      this.active=this.active_props
+    }
+    
   },
   methods: {
     isShowList() {
@@ -161,6 +173,12 @@ export default {
 }
 </script>
 <style>
+.Header{
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
 .m_top_20 {
   margin-top: 16px;
 }

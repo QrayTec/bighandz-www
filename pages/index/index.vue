@@ -1,7 +1,7 @@
 <template>
   <div class="Index">
     <header>
-      <HeaderNavBar class="Header"></HeaderNavBar>
+      <HeaderNavBar :active_props=0></HeaderNavBar>
     </header>
     <main>
       <section>
@@ -36,12 +36,7 @@ export default {
   margin: 0;
   padding: 0;
 }
-.Header{
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 999;
-}
+
 .First_data {
   width: 100%;
   height: 100vh;

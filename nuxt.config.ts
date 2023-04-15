@@ -3,5 +3,5 @@ export default defineNuxtConfig({
      modules: ['@nuxtjs/tailwindcss',],
      css:[
           'animate.css'
-     ]
+     ],
 })

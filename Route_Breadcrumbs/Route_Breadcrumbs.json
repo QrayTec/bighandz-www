@@ -1,0 +1,13 @@
+{
+  "/": "Home",
+  "/About_Us": {
+    "path": "/About_Us",
+    "Parent_title":"企業情報",
+    "name": "経営理念"
+  },
+  "/About_Us/Message_from_President":{
+    "path":"/About_Us/Message_from_President",
+    "Parent_title":"企業情報",
+    "name":"社長からのメッセージ"
+  }
+}
