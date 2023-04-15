@@ -125,22 +125,26 @@ export default {
     .Sub_pages_Mian_Title_Content{
       width: 1100px;
       padding-left: 0;
-
     }
     .Mian_Min_title{
-      letter-spacing:1rem;
-    }
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1299px) {
-    .Sub_pages_Mian_Title_Content{
-      width: 600px;
-      padding-left: 0;
-
+      letter-spacing:0.6rem;
     }
     .Mian_Big_title{
       font-size: 40px;
     }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1299px) {
+    .Sub_pages_Mian_Title_Content{
+      width: 700px;
+      padding-left: 0;
+
+    }
+    .Mian_Big_title{
+      font-size: 36px;
+    }
     .Mian_Min_title{
+      font-size: 12px;
+
       letter-spacing:0.2rem;
     }
     .Sub_pages_Iamge_Line{
@@ -148,8 +152,9 @@ export default {
       right: -10%;
     }
     .Sub_pages_Iamge_Line{
-      width:250px;
+      width:40%;
       bottom: 30%;
+      right: -4%;
     }
     .Sub_pages_Title{
       margin-top: 60px;
@@ -179,7 +184,7 @@ export default {
     }
     .Mian_Min_title{
       font-size: 18px;
-      letter-spacing:0.15rem;
+      letter-spacing:0rem;
     }
     .Sub_pages_Iamge_Line{
       width:70%;
