@@ -12,7 +12,7 @@
                 <img src="~/assets/index_image/icon_kaifayewu.png" alt="icon_kaifayewu">
               </div>
               <div class="Card_Title">
-                システム開発
+                システム開発保守
               </div>
               <div class="Card_Text animate__fadeInUp animate__animated animate-hover">
                 <p>主な業務経験は製造、流通関係です。</p>
@@ -30,7 +30,7 @@
                   <img src="~/assets/index_image/icon_jijianyewu-01.png" alt="icon_kaifayewu">
                 </div>
                 <div class="Card_Title">
-                  システム開発
+                  基盤構築
                 </div>
                 <div class="Card_Text animate__fadeInUp animate__animated animate-hover">
                   <p>主な業務経験は製造、流通関係です。</p>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="Card3_Content">
                   <div class="Card_Title">
-                    システム開発
+                    運用監視
                   </div>
                   <div class="Card_Text animate__fadeInUp animate__animated animate-hover">
                     <p>主な業務経験は製造、流通関係です。</p>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="Card3_Content">
                   <div class="Card_Title">
-                    システム開発
+                    データ分析
                   </div>
                   <div class="Card_Text animate__fadeInUp animate__animated animate-hover">
                     <p>主な業務経験は製造、流通関係です。</p>
@@ -81,7 +81,7 @@
                   <img src="~/assets/index_image/icon_yiliaobaojianyewu-01.png" alt="icon_kaifayewu">
                 </div>
                 <div class="Card_Title">
-                  システム開発
+                  ヘルスケア
                 </div>
                 <div class="Card_Text animate__fadeInUp animate__animated animate-hover">
                   <p>主な業務経験は製造、流通関係です。</p>
