@@ -375,6 +375,7 @@ export default {
   .industry_area_Main_tabs{
     height: auto;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .Tabs_item_image{
     width: 100%;
