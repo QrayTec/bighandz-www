@@ -3,9 +3,11 @@
     <div class="Nav_Bar_List_data">
       <div class="NavBar_Main">
         <div class="NavBar_Main_List">
-          <div class="NavBar_logo">
-            <img src="~/assets/index_image/BigHandzCo.Ltd.png" alt="">
-          </div>
+          <NuxtLink to="/">
+            <div class="NavBar_logo">
+              <img src="~/assets/index_image/BigHandzCo.Ltd.png" alt="">
+            </div>
+          </NuxtLink>
 
           <div class="nav_bar_button">
             <button type="button" class="menu_Btn" @click="isShowList()">
@@ -41,10 +43,10 @@
     <div class="Secondary_Menu" v-show="Secondary_Menu_Flag">
       <div class="Secondary_Menu_Data">
         <div class="Secondary_Menu_title">
-          <div class="Secondary_Menu_Icon">
-            <img src="~/assets/NavBar/icon_gongsixinxi.png" alt="">
+          <div class="Secondary_Menu_Icon"> 
+            <img :src="Secondary_Menu_Icon" alt="">
           </div>
-          <div class="Secondary_Menu_title_Text">企業情報</div>
+          <div class="Secondary_Menu_title_Text">{{Secondary_Menu_Title}}</div>
         </div>
         <div class="Secondary_Menu_List">
           <div class="Secondary_Menu_List_Data" v-for="(item, index) in Secondary_Menu_List_Data" :key="index">
@@ -60,7 +62,6 @@
   </div>
 </template>
 <script>
-import internal from 'stream';
 import gongsixinxi from '~/assets/NavBar/icon_gongsixinxi.png';
 import yewugaishu from '~/assets/NavBar/icon_yewugaishu.png';
 import zhaopinxinxi from '~/assets/NavBar/icon_zhaopinxinxi.png';
@@ -131,9 +132,11 @@ export default {
     },
     NavBar_click(index) {
       this.active = index;
-        this.Secondary_Menu_Flag = !this.Secondary_Menu_Flag
       if (index == 1 || index == 2 || index == 3) {
         this.Secondary_Menu_Flag = true
+      }
+      else{
+        this.Secondary_Menu_Flag = false
       }
     },
     Secondary_Menu_Close(){
@@ -225,7 +228,6 @@ export default {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-
 }
 
 .NavBar_List_Content {
@@ -241,6 +243,8 @@ export default {
   justify-content: center;
   margin: 0px 10px;
   position: relative;
+  cursor:pointer;
+
 
 }
 
@@ -405,11 +409,13 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 16px 0;
   }
 
   .NavBar_List_Content {
     width: 100%;
     height: 50px;
+
   }
 
   .NavBar_List {

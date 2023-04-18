@@ -125,6 +125,7 @@ export default {
 @media screen and (max-width: 1023px) {
   .index_First{
     height: 100vh;
+    min-height: 700px;
   }
   .index_First_Iamge_title{
     margin-top: 150px;

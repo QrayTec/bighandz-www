@@ -58,7 +58,7 @@ export default {
   },
   mounted() {
     if (process.client) {
-      document.title = '企業情報-経営理念'
+      document.title = '企業情報-社長からのメッセージ'
     }
   }
 }

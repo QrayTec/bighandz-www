@@ -3,7 +3,9 @@
     <div class="Route_Breadcrumbs_main">
       <div class="Parent_title">{{ Parent_title }}</div>
 
-      <div class="Route_Breadcrumbs_to">></div>
+      <div class="Route_Breadcrumbs_to">
+        <img src="~/assets/Route_Breadcrumbs/icon_right.png" alt="">
+      </div>
       <div class="Route_Breadcrumbs_Index_title">{{Index_title}}</div>
     </div>
   </div>
@@ -53,11 +55,9 @@ export default {
     opacity: 0.4;
   }
   .Route_Breadcrumbs_to{
-    color: #FFFFFF;
-    width: 8px;
-    height: 16px;
-    line-height: 16px;
-    opacity: 0.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0px 20px;
   }
   .Route_Breadcrumbs_Index_title{

@@ -28,7 +28,11 @@
 </template>
 <script>
 export default {
-
+  mounted() {
+    if (process.client) {
+      document.title = 'ホーム'
+    }
+  }
 }
 </script>
 <style>
