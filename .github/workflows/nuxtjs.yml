@@ -26,7 +26,8 @@ jobs:
       - name: Generate
         run: 
           yarn generate
-          echo "${{ secrets.CNAME }}" > ./dist/CNAME
+          cd dist
+          echo "${{ secrets.CNAME }}" > CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
