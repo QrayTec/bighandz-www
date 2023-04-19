@@ -23,9 +23,8 @@ jobs:
 
       - name: Build 🔧
         run: |
-          yarn run build
-          cd docs
-          cp index.html 404.html
+          yarn generate
+          cd dist
           echo "${{ secrets.CNAME }}" > CNAME
 
       - name: Deploy
