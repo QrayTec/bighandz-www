@@ -1,30 +1,31 @@
-name: cd
-
-on: [push, pull_request]
-
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
 jobs:
-  cd:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
-
+  build-and-deploy:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@master
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
 
-      - name: Setup node env
-        uses: actions/setup-node@v2.1.2
+      - name: Cache ☕
+        id: cache
+        uses: actions/cache@v1
         with:
-          node-version: ${{ matrix.node }}
+          path: node_modules
+          key: ${{runner.OS}}-npm-caches-${{ hashFiles('pnpm-lock.yaml') }}
 
-      - name: Install dependencies
-        run: yarn
+      - name: Install 🔧
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn install
 
-      - name: Generate
-        run: yarn generate
+      - name: Build 🔧
+        run: |
+          yarn generate
+          cd dist
+          echo "${{ secrets.CNAME }}" > CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
