@@ -30,7 +30,7 @@
         <div class="NavBar_List" v-show="NavbarShow">
           <NuxtLink class="NavBar_List_Content" :to="item.link" v-for="(item, index) in Navbar_Data" :key="index"
             :class="{ 'active_Text': active == index }">
-            <div class="NavBar_List_Content " @click="NavBar_click(index)">
+            <div class="NavBar_List_Content" @mouseover="NavBar_click(index)"  @click="">
               {{ item.title }}
             </div>
             <div class="active_List" v-show="active == index"></div>
@@ -40,24 +40,26 @@
       </div>
 
     </div>
-    <div class="Secondary_Menu" v-show="Secondary_Menu_Flag">
-      <div class="Secondary_Menu_Data">
-        <div class="Secondary_Menu_title">
-          <div class="Secondary_Menu_Icon"> 
-            <img :src="Secondary_Menu_Icon" alt="">
+    <transition class="animate__animated" :class="Secondary_Menu_Flag?'animate__fadeIn':'animate__fadeOut'">
+      <div class="Secondary_Menu " v-show="Secondary_Menu_Flag" @mouseleave="NavBar_Leave">
+        <div class="Secondary_Menu_Data "  >
+          <div class="Secondary_Menu_title">
+            <div class="Secondary_Menu_Icon"> 
+              <img :src="Secondary_Menu_Icon" alt="">
+            </div>
+            <div class="Secondary_Menu_title_Text">{{Secondary_Menu_Title}}</div>
           </div>
-          <div class="Secondary_Menu_title_Text">{{Secondary_Menu_Title}}</div>
-        </div>
-        <div class="Secondary_Menu_List">
-          <div class="Secondary_Menu_List_Data" v-for="(item, index) in Secondary_Menu_List_Data" :key="index">
-            <nuxt-link :to="item.link">
-              {{ item.title }}
-            </nuxt-link>
+          <div class="Secondary_Menu_List">
+            <div class="Secondary_Menu_List_Data" v-for="(item, index) in Secondary_Menu_List_Data" :key="index">
+              <nuxt-link :to="item.link">
+                {{ item.title }}
+              </nuxt-link>
+            </div>
           </div>
         </div>
+  
       </div>
-
-    </div>
+    </transition>
     <div class="Secondary_Menu_Close"  v-show="Secondary_Menu_Flag" @click="Secondary_Menu_Close"></div>
   </div>
 </template>
@@ -138,6 +140,10 @@ export default {
       else{
         this.Secondary_Menu_Flag = false
       }
+    },
+    NavBar_Leave(){
+      this.active=0
+      this.Secondary_Menu_Flag = false
     },
     Secondary_Menu_Close(){
       this.Secondary_Menu_Flag = false
