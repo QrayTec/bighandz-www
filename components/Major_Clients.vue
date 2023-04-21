@@ -47,7 +47,7 @@ export default {
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(~/assets/index_image/pic_banner.png);
+    background-color: transparent;
   }
   .Major_Clients_Main{
     width: 100%;

@@ -24,7 +24,7 @@ export default {
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-image: url('~/assets/index_image/pic_banner.png');
+  background-color: transparent;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

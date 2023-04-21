@@ -19,6 +19,9 @@
       <section>
         <MajorClients></MajorClients>
       </section>
+      <section>
+        <div class="bg_Main"></div>
+      </section>
     </main>
     <footer>
       <Footer></Footer>
@@ -47,12 +50,23 @@ export default {
   overflow: hidden;
 
 }
-
+.bg_Main{
+  width: 100%;
+  height: 100%;
+  background-image: url('~/assets/index_image/pic_banner.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -2;
+}
 .bg {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url('~/assets/index_image/pic_banner.png');
+  background-color: transparent;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
