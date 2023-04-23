@@ -7,7 +7,11 @@
       <div class="Footer_List_Content">
         <div class="List_data" v-for="(item, index) in Footer_List_Content" :key="index">
           <div class="Footer_Line"></div>
-        <div class="Footer_List_Text">{{item.Content}}</div>
+        <div class="Footer_List_Text">
+          <nuxt-link :to="item.link">
+            {{item.Content}}
+          </nuxt-link>
+        </div>
         <div class="Footer_Line"></div>
         </div>
       </div>
@@ -22,10 +26,10 @@ export default {
   data() {
     return {
       Footer_List_Content:[
-        {Content:"ホーム"},
-        {Content:"個人情報保護方針"},
-        {Content:"利用規約"},
-        {Content:"お問い合わせ"},
+        {Content:"ホーム",link:"/"},
+        {Content:"個人情報保護方針",link:""},
+        {Content:"利用規約",link:""},
+        {Content:"お問い合わせ",link:""},
       ]
     }
   },

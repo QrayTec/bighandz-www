@@ -9,5 +9,15 @@
     "path":"/About_Us/Message_from_President",
     "Parent_title":"企業情報",
     "name":"社長からのメッセージ"
+  },
+  "/About_Us/Related_Company":{
+    "path":"/About_Us/Related_Company",
+    "Parent_title":"企業情報",
+    "name":"関連 · 会社"
+  },
+  "/About_Us/Company_Introduction_Development_Process":{
+    "path":"/About_Us/Company_Introduction_Development_Process",
+    "Parent_title":"企業情報",
+    "name":"会社概要と沿革"
   }
 }

@@ -30,7 +30,7 @@
         <div class="NavBar_List" v-show="NavbarShow">
           <NuxtLink class="NavBar_List_Content" :to="item.link" v-for="(item, index) in Navbar_Data" :key="index"
             :class="{ 'active_Text': active == index }">
-            <div class="NavBar_List_Content" @mouseover="NavBar_click(index)"  @click="">
+            <div class="NavBar_List_Content" @mouseover="NavBar_click(index)" @click="">
               {{ item.title }}
             </div>
             <div class="active_List" v-show="active == index"></div>
@@ -40,14 +40,14 @@
       </div>
 
     </div>
-    <transition class="animate__animated" :class="Secondary_Menu_Flag?'animate__fadeIn':'animate__fadeOut'">
+    <transition class="animate__animated" :class="Secondary_Menu_Flag ? 'animate__fadeIn' : 'animate__fadeOut'">
       <div class="Secondary_Menu " v-show="Secondary_Menu_Flag" @mouseleave="NavBar_Leave">
-        <div class="Secondary_Menu_Data "  >
+        <div class="Secondary_Menu_Data ">
           <div class="Secondary_Menu_title">
-            <div class="Secondary_Menu_Icon"> 
+            <div class="Secondary_Menu_Icon">
               <img :src="Secondary_Menu_Icon" alt="">
             </div>
-            <div class="Secondary_Menu_title_Text">{{Secondary_Menu_Title}}</div>
+            <div class="Secondary_Menu_title_Text">{{ Secondary_Menu_Title }}</div>
           </div>
           <div class="Secondary_Menu_List">
             <div class="Secondary_Menu_List_Data" v-for="(item, index) in Secondary_Menu_List_Data" :key="index">
@@ -57,10 +57,10 @@
             </div>
           </div>
         </div>
-  
+
       </div>
     </transition>
-    <div class="Secondary_Menu_Close"  v-show="Secondary_Menu_Flag" @click="Secondary_Menu_Close"></div>
+    <div class="Secondary_Menu_Close" v-show="Secondary_Menu_Flag" @click="Secondary_Menu_Close"></div>
   </div>
 </template>
 <script>
@@ -82,8 +82,8 @@ export default {
       Secondary_Menu_List_1: [
         { title: "経営理念", link: '/About_Us' },
         { title: "社長からのメッセージ", link: '/About_Us/Message_from_President' },
-        { title: "会社概要と沿革", link: '/' },
-        { title: "関連会社", link: '/' },
+        { title: "会社概要と沿革", link: '/About_Us/Company_Introduction_Development_Process' },
+        { title: "関連会社", link: '/About_Us/Related_Company' },
       ],
       Secondary_Menu_List_2: [
         { title: "システム開発事業", link: '/' },
@@ -104,21 +104,21 @@ export default {
       NavbarShow: false,
     }
   },
-  props:{
-    active_props:{
-      type:Number,
+  props: {
+    active_props: {
+      type: Number,
       required: true
     },
-    
+
   },
   mounted() {
     this.Secondary_Menu_List_Data = this.Secondary_Menu_List_1;
     window.addEventListener('resize', this.checkScreenSize)
     this.checkScreenSize()
-    if(this.active_props!=null){
-      this.active=this.active_props
+    if (this.active_props != null) {
+      this.active = this.active_props
     }
-    
+
   },
   methods: {
     isShowList() {
@@ -137,15 +137,21 @@ export default {
       if (index == 1 || index == 2 || index == 3) {
         this.Secondary_Menu_Flag = true
       }
-      else{
+      else {
         this.Secondary_Menu_Flag = false
       }
     },
-    NavBar_Leave(){
-      this.active=0
+    NavBar_Leave() {
+
+      if (this.active_props != null) {
+        this.active = this.active_props
+      }
+      else {
+        this.active = 0
+      }
       this.Secondary_Menu_Flag = false
     },
-    Secondary_Menu_Close(){
+    Secondary_Menu_Close() {
       this.Secondary_Menu_Flag = false
     }
   },
@@ -182,18 +188,21 @@ export default {
 }
 </script>
 <style>
-.Header{
+.Header {
   position: fixed;
   left: 0;
   right: 0;
   z-index: 999;
 }
+
 .m_top_20 {
   margin-top: 16px;
 }
-.Secondary_Menu_Close{
+
+.Secondary_Menu_Close {
   height: 100vh;
 }
+
 .Nav_Bar {
   width: 100%;
   height: 80px;
@@ -249,7 +258,7 @@ export default {
   justify-content: center;
   margin: 0px 10px;
   position: relative;
-  cursor:pointer;
+  cursor: pointer;
 
 
 }
